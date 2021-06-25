@@ -32,7 +32,7 @@ async function sendMessage(channel, message) {
 
 //login
 const client = new Discord.Client();
-const token = fs.readFileSync("token.txt", "utf-8");
+const token = fs.readFileSync("token.txt", "utf-8").replace("\n", "");
 
 
 updateQuestions().then(() => {
